@@ -1,6 +1,7 @@
 import Link from "next/link";
+import withHeaderAndFooter from "../../hooks/withHeaderAndFooter";
 
-export default function Login() {
+function Login() {
     return (
         <div className="main1">
             <div className="main2">
@@ -43,3 +44,5 @@ export default function Login() {
         </div>
     );
 }
+
+export default withHeaderAndFooter(Login);

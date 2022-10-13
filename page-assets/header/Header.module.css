@@ -1,0 +1,21 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-left: 10px;
+    background-color: #46344e;
+    color: #faed26;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.header a {
+    float: left;
+    color: #faed26;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}

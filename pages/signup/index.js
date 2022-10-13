@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import withHeaderAndFooter from "../../hooks/withHeaderAndFooter";
 
-export default function Signup() {
+function Signup() {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
@@ -165,3 +166,5 @@ export default function Signup() {
         </div>
     );
 }
+
+export default withHeaderAndFooter(Signup);
