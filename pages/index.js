@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -17,13 +18,13 @@ export default function Home() {
                     </div>
                     <ul>
                         <li>
-                            <a href="#">HOME</a>
+                            <Link href="">HOME</Link>
                         </li>
                         <li>
-                            <a href="/login">LOGIN</a>
+                            <Link href="/login">LOGIN</Link>
                         </li>
                         <li>
-                            <a href="/signup">SIGNUP</a>
+                            <Link href="/signup">SIGNUP</Link>
                         </li>
                     </ul>
                 </nav>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Signup() {
@@ -152,9 +153,9 @@ export default function Signup() {
                             )}
                             <p>
                                 Already have an account?{" "}
-                                <a href="/login" style={{ color: "#feac48" }}>
-                                    Login
-                                </a>
+                                <Link href="/login">
+                                    <a style={{ color: "#feac48" }}>Login</a>
+                                </Link>
                             </p>
                             {error && <p className="error">{error}</p>}
                         </div>

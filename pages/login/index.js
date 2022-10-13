@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Signup() {
@@ -126,9 +127,9 @@ export default function Signup() {
                             </button>
                             <p>
                                 Don&apos;t have an account?{" "}
-                                <a href="/signup" style={{ color: "#feac48" }}>
-                                    Sign Up
-                                </a>
+                                <Link href="/signup">
+                                    <a style={{ color: "#feac48" }}>Sign Up</a>
+                                </Link>
                             </p>
 
                             {error && <p className="error">{error}</p>}

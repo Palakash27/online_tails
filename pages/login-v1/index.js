@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Login() {
     return (
         <div className="main1">
@@ -33,8 +35,8 @@ export default function Login() {
                     </div>
 
                     <p className="linkage">
-                        <a href="#">Password Forget ?</a> OR{" "}
-                        <a href="#">Sign Up ?</a>
+                        <Link href="#">Password Forget ?</Link> OR{" "}
+                        <Link href="#">Sign Up ?</Link>
                     </p>
                 </div>
             </div>
