@@ -5,7 +5,12 @@ import withHeaderAndFooter from "../hooks/withHeaderAndFooter";
 
 function Home() {
     return (
-        <div>
+        <div
+            style={{
+                marginTop: "50px",
+            }}
+        >
+            <hr className="solid" />
             <div>
                 <Image
                     src="/images/header.png"
@@ -70,6 +75,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <hr className="solid" />
         </div>
     );
 }
