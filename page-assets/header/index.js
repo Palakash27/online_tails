@@ -6,11 +6,11 @@ export default function Header(props) {
     return (
         <div className={styles.header}>
             <Link href="/">Home</Link>
-            <Link href="/appointment">Appointment</Link>
+            <Link href="/appointment">Appointment(TBD)</Link>
             <Link href="/signup">Signup</Link>
             <Link href="/login">Login</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/about">About</Link>
+            <Link href="/contact">Contact(TBD)</Link>
+            <Link href="/about">About(TBD)</Link>
         </div>
     );
 }
