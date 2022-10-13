@@ -7,6 +7,8 @@ export default function Header(props) {
         <div className={styles.header}>
             <Link href="/">Home</Link>
             <Link href="/appointment">Appointment</Link>
+            <Link href="/signup">Signup</Link>
+            <Link href="/login">Login</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>
         </div>
