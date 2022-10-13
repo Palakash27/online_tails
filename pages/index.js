@@ -20,7 +20,10 @@ export default function Home() {
                             <a href="#">HOME</a>
                         </li>
                         <li>
-                            <a href="#">LOGIN</a>
+                            <a href="/login">LOGIN</a>
+                        </li>
+                        <li>
+                            <a href="/signup">SIGNUP</a>
                         </li>
                     </ul>
                 </nav>
