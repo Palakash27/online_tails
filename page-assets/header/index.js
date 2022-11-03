@@ -12,6 +12,7 @@ export default function Header(props) {
             <Link href="/contact">Contact(TBD)</Link>
             <Link href="/about">About(TBD)</Link>
             <Link href="/pets">Pets</Link>
+            <Link href="/">Signout</Link>
         </div>
     );
 }
