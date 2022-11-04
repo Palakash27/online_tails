@@ -1,18 +1,33 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./Header.module.css";
+import app from "../../utility/firebase/firebaseobject";
+import { getAuth } from "firebase/auth";
+import signout from "../../utility/signout/signout";
 
 export default function Header(props) {
+    const auth = getAuth();
+    const user = auth.currentUser;
     return (
         <div className={styles.header}>
             <Link href="/">Home</Link>
             <Link href="/appointment">Appointment(TBD)</Link>
-            <Link href="/signup">Signup</Link>
-            <Link href="/login">Login</Link>
             <Link href="/contact">Contact(TBD)</Link>
             <Link href="/about">About(TBD)</Link>
             <Link href="/pets">Pets</Link>
-            <Link href="/">Signout</Link>
+            <div
+                style={{
+                    float: "right",
+                }}
+            >
+                {!user && <Link href="/login">Login</Link>}
+                {!user && <Link href="/signup">Signup</Link>}
+                {user && (
+                    <Link href="/">
+                        <a onClick={signout}>{user.email} signout?</a>
+                    </Link>
+                )}
+            </div>
         </div>
     );
 }

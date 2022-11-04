@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import withHeaderAndFooter from "../../hooks/withHeaderAndFooter";
+import app from "../../utility/firebase/firebaseobject";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/router";
 
 function Signup() {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const router = useRouter();
+    if (user != null) {
+        console.log("Somebody already signed in", user);
+    }
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
@@ -11,34 +20,32 @@ function Signup() {
     const [error, setError] = React.useState("");
     const [loading, setLoading] = React.useState(false);
 
+    useEffect(() => {
+        if (!loading && user) router.push("/");
+    }, [user, loading, router]);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+
         if (password !== confirmPassword) {
             setError("Passwords do not match");
             setLoading(false);
         } else {
-            try {
-                const res = await fetch("/api/signup", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ name, email, password }),
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    const user = userCredential.user;
+                    console.log("user created", user);
+                    router.push("/");
+                    // ...
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // ..
                 });
-                const data = await res.json();
-                if (data.error) {
-                    setError(data.error);
-                } else {
-                    setError("");
-                    setName("");
-                    setEmail("");
-                    setPassword("");
-                    setConfirmPassword("");
-                }
-            } catch (err) {
-                setError(err.message);
-            }
+
             setLoading(false);
         }
     };
@@ -101,6 +108,7 @@ function Signup() {
                             <label htmlFor="name">Name</label>
                             <input
                                 type="text"
+                                required
                                 id="name"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
@@ -109,6 +117,7 @@ function Signup() {
                             <input
                                 type="email"
                                 id="email"
+                                required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
@@ -116,6 +125,7 @@ function Signup() {
                             <input
                                 type="password"
                                 id="password"
+                                required
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
@@ -125,6 +135,7 @@ function Signup() {
                             <input
                                 type="password"
                                 id="confirmPassword"
+                                required
                                 value={confirmPassword}
                                 onChange={(e) =>
                                     setConfirmPassword(e.target.value)
