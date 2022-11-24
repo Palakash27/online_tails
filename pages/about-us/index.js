@@ -87,8 +87,8 @@ function AboutUs() {
                                 their health or behaviour may be simple to miss
                                 because many dogs and cats are adept at masking
                                 symptoms of a problem. Additionally, some pets
-                                with certain diseases don't exhibit any symptoms
-                                at all.
+                                with certain diseases don&apos;t exhibit any
+                                symptoms at all.
                             </p>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ function AboutUs() {
                                 We are committed to offering all of our pets
                                 with cheap veterinarian services because we
                                 firmly think that every pet deserves to receive
-                                the most basic veterinary care. All About Pets'
+                                the most basic veterinary care. All About Pets
                                 staff members genuinely enjoy their work. Every
                                 member of our team has received certification in
                                 discipline and training, and they are all
