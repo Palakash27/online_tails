@@ -12,7 +12,7 @@ export default function Header(props) {
         <div className={styles.header}>
             <Link href="/">Home</Link>
             <Link href="/appointment">Appointment</Link>
-            <Link href="/contact">Contact(TBD)</Link>
+            <Link href="/contact">Contact</Link>
             <Link href="/about-us">About Us</Link>
             <Link href="/pets">Pets</Link>
             <Link href="https://www.project-disco.org/wp-content/uploads/2018/04/Android-logo.jpg">
