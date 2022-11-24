@@ -1,8 +1,52 @@
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import withHeaderAndFooter from "../../hooks/withHeaderAndFooter";
 
-function Pets() {
+import { firestore } from "../../utility/firebase/firebaseobject";
+
+import {
+    collection,
+    QueryDocumentSnapshot,
+    DocumentData,
+    query,
+    where,
+    limit,
+    getDocs,
+} from "@firebase/firestore";
+import Image from "next/image";
+
+function Appointment() {
+    // const alertsCollection = collection(firestore, "alerts");
+    // const [alerts, setAlerts] = useState([]);
+    // const [loading, setLoading] = useState(true);
+
+    // const getAlerts = async () => {
+    //     // construct a query to get up to 10 undone alerts
+    //     const alertsQuery = query(
+    //         alertsCollection,
+    //         where("alert_type", "==", "vaccination"),
+    //         limit(10)
+    //     );
+    //     // get the alerts
+    //     const querySnapshot = await getDocs(alertsQuery);
+
+    //     // map through alerts adding them to an array
+    //     const result = [];
+    //     querySnapshot.forEach((snapshot) => {
+    //         result.push(snapshot);
+    //     });
+    //     // set it to state
+    //     setAlerts(result);
+    // };
+
+    // useEffect(() => {
+    //     // get the alerts
+    //     getAlerts();
+    //     // reset loading
+    //     setTimeout(() => {
+    //         setLoading(false);
+    //     }, 2000);
+    // }, []);
+
     return (
         <div
             style={{
@@ -21,7 +65,7 @@ function Pets() {
                     margin: 0,
                 }}
             >
-                Pets
+                Appointments
             </h1>
             <div
                 className="cards"
@@ -53,12 +97,12 @@ function Pets() {
                             }}
                         >
                             <Image
-                                src="/images/home.jpeg"
+                                src="/images/appointments/app1.jpeg"
                                 alt="home-card"
                                 layout="fill"
                             />
                         </div>
-                        <p>HOME</p>
+                        <p>Vaccination Appointment</p>
                     </div>
                     <div
                         style={{
@@ -75,39 +119,37 @@ function Pets() {
                             }}
                         >
                             <Image
-                                src="/images/alerts.jpeg"
+                                src="/images/appointments/app2.jpeg"
                                 alt="alerts-card"
                                 layout="fill"
                             />
                         </div>
-                        <p>ALERTS</p>
+                        <p>Grooming Appointment</p>
                     </div>
-                    <Link href="/pets/add-pet">
+                    <div
+                        style={{
+                            margin: "10px",
+                            textAlign: "center",
+                        }}
+                    >
                         <div
+                            className="add-pet-card"
                             style={{
-                                margin: "10px",
-                                textAlign: "center",
+                                position: "relative",
+                                width: "500px",
+                                height: "500px",
                             }}
                         >
-                            <div
-                                className="add-pet-card"
-                                style={{
-                                    position: "relative",
-                                    width: "500px",
-                                    height: "500px",
-                                }}
-                            >
-                                <Image
-                                    src="/images/add-pet.jpeg"
-                                    alt="add-pet-card"
-                                    layout="fill"
-                                />
-                            </div>
-                            <p>ADD PET</p>
+                            <Image
+                                src="/images/appointments/app3.jpeg"
+                                alt="add-pet-card"
+                                layout="fill"
+                            />
                         </div>
-                    </Link>
+                        <p>Vet Appointment</p>
+                    </div>
                 </div>
-
+                {/*
                 <div
                     style={{
                         display: "flex",
@@ -179,11 +221,11 @@ function Pets() {
                         </div>
                         <p>ABOUT</p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <hr className="solid" />
         </div>
     );
 }
 
-export default withHeaderAndFooter(Pets);
+export default withHeaderAndFooter(Appointment);

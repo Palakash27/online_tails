@@ -11,10 +11,13 @@ export default function Header(props) {
     return (
         <div className={styles.header}>
             <Link href="/">Home</Link>
-            <Link href="/appointment">Appointment(TBD)</Link>
+            <Link href="/appointment">Appointment</Link>
             <Link href="/contact">Contact(TBD)</Link>
-            <Link href="/about">About(TBD)</Link>
+            <Link href="/about-us">About Us</Link>
             <Link href="/pets">Pets</Link>
+            <Link href="https://www.project-disco.org/wp-content/uploads/2018/04/Android-logo.jpg">
+                Download App
+            </Link>
             <div
                 style={{
                     float: "right",
