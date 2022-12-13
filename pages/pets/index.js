@@ -38,50 +38,54 @@ function Pets() {
                         display: "flex",
                     }}
                 >
-                    <div
-                        style={{
-                            margin: "10px",
-                            textAlign: "center",
-                        }}
-                    >
+                    <Link href="/">
                         <div
-                            className="home-card"
                             style={{
-                                position: "relative",
-                                width: "500px",
-                                height: "500px",
+                                margin: "10px",
+                                textAlign: "center",
                             }}
                         >
-                            <Image
-                                src="/images/home.jpeg"
-                                alt="home-card"
-                                layout="fill"
-                            />
+                            <div
+                                className="home-card"
+                                style={{
+                                    position: "relative",
+                                    width: "500px",
+                                    height: "500px",
+                                }}
+                            >
+                                <Image
+                                    src="/images/home.jpeg"
+                                    alt="home-card"
+                                    layout="fill"
+                                />
+                            </div>
+                            <p>HOME</p>
                         </div>
-                        <p>HOME</p>
-                    </div>
-                    <div
-                        style={{
-                            margin: "10px",
-                            textAlign: "center",
-                        }}
-                    >
+                    </Link>
+                    <Link href="/pets/alerts">
                         <div
-                            className="alerts-card"
                             style={{
-                                position: "relative",
-                                width: "500px",
-                                height: "500px",
+                                margin: "10px",
+                                textAlign: "center",
                             }}
                         >
-                            <Image
-                                src="/images/alerts.jpeg"
-                                alt="alerts-card"
-                                layout="fill"
-                            />
+                            <div
+                                className="alerts-card"
+                                style={{
+                                    position: "relative",
+                                    width: "500px",
+                                    height: "500px",
+                                }}
+                            >
+                                <Image
+                                    src="/images/alerts.jpeg"
+                                    alt="alerts-card"
+                                    layout="fill"
+                                />
+                            </div>
+                            <p>ALERTS</p>
                         </div>
-                        <p>ALERTS</p>
-                    </div>
+                    </Link>
                     <Link href="/pets/add-pet">
                         <div
                             style={{
@@ -113,72 +117,78 @@ function Pets() {
                         display: "flex",
                     }}
                 >
-                    <div
-                        style={{
-                            margin: "10px",
-                            textAlign: "center",
-                        }}
-                    >
+                    <Link href="/pets/add-pet">
                         <div
-                            className="my-pets-card"
                             style={{
-                                position: "relative",
-                                width: "500px",
-                                height: "500px",
+                                margin: "10px",
+                                textAlign: "center",
                             }}
                         >
-                            <Image
-                                src="/images/my-pets.jpeg"
-                                alt="my-pets-card"
-                                layout="fill"
-                            />
+                            <div
+                                className="my-pets-card"
+                                style={{
+                                    position: "relative",
+                                    width: "500px",
+                                    height: "500px",
+                                }}
+                            >
+                                <Image
+                                    src="/images/my-pets.jpeg"
+                                    alt="my-pets-card"
+                                    layout="fill"
+                                />
+                            </div>
+                            <p>MY PETS</p>
                         </div>
-                        <p>MY PETS</p>
-                    </div>
-                    <div
-                        style={{
-                            margin: "10px",
-                            textAlign: "center",
-                        }}
-                    >
+                    </Link>
+                    <Link href="/contact">
                         <div
-                            className="contact-card"
                             style={{
-                                position: "relative",
-                                width: "500px",
-                                height: "500px",
+                                margin: "10px",
+                                textAlign: "center",
                             }}
                         >
-                            <Image
-                                src="/images/contact.jpeg"
-                                alt="contact-card"
-                                layout="fill"
-                            />
+                            <div
+                                className="contact-card"
+                                style={{
+                                    position: "relative",
+                                    width: "500px",
+                                    height: "500px",
+                                }}
+                            >
+                                <Image
+                                    src="/images/contact.jpeg"
+                                    alt="contact-card"
+                                    layout="fill"
+                                />
+                            </div>
+                            <p>CONTACT</p>
                         </div>
-                        <p>CONTACT</p>
-                    </div>
-                    <div
-                        style={{
-                            margin: "10px",
-                            textAlign: "center",
-                        }}
-                    >
+                    </Link>
+                    <Link href="/about-us">
                         <div
-                            className="about-card"
                             style={{
-                                position: "relative",
-                                width: "500px",
-                                height: "500px",
+                                margin: "10px",
+                                textAlign: "center",
                             }}
                         >
-                            <Image
-                                src="/images/about.jpeg"
-                                alt="about-card"
-                                layout="fill"
-                            />
+                            <div
+                                className="about-card"
+                                style={{
+                                    position: "relative",
+                                    width: "500px",
+                                    height: "500px",
+                                }}
+                            >
+                                <Image
+                                    src="/images/about.jpeg"
+                                    alt="about-card"
+                                    layout="fill"
+                                />
+                            </div>
+                            <p>ABOUT</p>
                         </div>
-                        <p>ABOUT</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
             <hr className="solid" />

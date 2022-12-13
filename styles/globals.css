@@ -38,6 +38,19 @@ input:focus {
     color: black;
 }
 
+select {
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 10px 0px 25px;
+}
+select:focus {
+    background-color: yellow;
+    color: black;
+}
+
 .carousel-root {
     width: 64% !important;
     margin: auto !important;
